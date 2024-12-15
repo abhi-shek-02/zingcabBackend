@@ -16,7 +16,7 @@ let corsOptions = {
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON requests
-app.use(cors(corsOptions))
+app.use(cors())
 
 const PORT = process.env.PORT 
 
