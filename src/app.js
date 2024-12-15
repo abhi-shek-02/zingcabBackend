@@ -1,14 +1,22 @@
 const envs =  require('./dotenv');
+var cors = require('cors')
 const express = require("express");
 const mongoose = require("mongoose");
 const bookingRoutes = require("../routes/bookingRoutes");
 const contactRoutes = require("../routes/contactRoutes");
 const enquiryRoutes = require("../routes/enquiryRoutes");
 const adminRoutes = require("../routes/adminRoutes");
+ 
+ 
+let corsOptions = {
+  origin: ['https://zingcab.in' ,'http://localhost:3000'],
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON requests
+app.use(cors(corsOptions))
 
 const PORT = process.env.PORT 
 
