@@ -2,10 +2,11 @@
   "name": "cab-booking-backend",
   "version": "1.0.0",
   "description": "Backend for intercity cab booking system",
-  "main": "index.js",
+  "main": "./src/app.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "cross-env NODE_ENV=development  nodemon --experimental-modules --es-module-specifier-resolution=node ./src/app.js  ",
+    "prod": "cross-env NODE_ENV=production  node  --experimental-modules --es-module-specifier-resolution=node ./src/app.js "
   },
   "keywords": [
     "cab-booking",
@@ -16,12 +17,14 @@
   "author": "zingcab",
   "license": "MIT",
   "dependencies": {
+    "crossenv": "^0.0.2-security",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.9.0",
     "uuid": "^11.0.3"
   },
   "devDependencies": {
-    "nodemon": "^3.0.0"
+    "nodemon": "^3.0.0",
+    "cross-env": "^7.0.3"
   }
 }
