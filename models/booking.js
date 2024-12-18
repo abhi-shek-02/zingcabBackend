@@ -15,8 +15,9 @@ const bookingSchema = new mongoose.Schema({
     required: true,
   },
   dateOfJourney: {
-    type: Date,
+    type:  Date ,
     required: true,
+    default : ()=> new Date()
   },
   phoneNumber: {
     type: String,

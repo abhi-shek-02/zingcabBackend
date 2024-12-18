@@ -107,6 +107,8 @@ const getBookingDetails = async (req, res) => {
       };
     }
 
+    console.log(query)
+
     const bookings = await Booking.find(query)
       .populate("userId", "phoneNumber")
       .skip((page - 1) * limit)
