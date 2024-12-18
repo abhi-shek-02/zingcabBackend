@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "cross-env NODE_ENV=development  nodemon --experimental-modules --es-module-specifier-resolution=node ./src/app.js  ",
-    "prod": "cross-env NODE_ENV=production  node  --experimental-modules --es-module-specifier-resolution=node ./src/app.js "
+    "prod": "cross-env NODE_ENV=production  node  --experimental-modules --es-module-specifier-resolution=node ./src/app.js ",
+    "qa": "cross-env NODE_ENV=qa  node  --experimental-modules --es-module-specifier-resolution=node ./src/app.js "
   },
   "keywords": [
     "cab-booking",
